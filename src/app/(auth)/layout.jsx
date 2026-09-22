@@ -1,10 +1,13 @@
 import Navbar from "@/component/shared/Navbar/Navbar";
+import { montserrat } from "../layout";
 
-const authLayout = ({children}) => {
+const authLayout = ({ children }) => {
     return (
-        <div>
-            <Navbar></Navbar>
-            {children}
+        <div className={`${montserrat.className}`}>
+            <main>
+                <Navbar></Navbar>
+                {children}
+            </main>
         </div>
     );
 };
