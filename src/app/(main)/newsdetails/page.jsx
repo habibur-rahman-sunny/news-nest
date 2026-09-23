@@ -1,5 +1,5 @@
 
-const NewsDetails = () => {
+const page = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const NewsDetails = () => {
     );
 };
 
-export default NewsDetails;
+export default page;

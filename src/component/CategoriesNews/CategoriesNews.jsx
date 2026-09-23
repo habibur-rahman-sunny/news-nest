@@ -1,4 +1,4 @@
-import { getCategoriesNews } from "@/lib/CategoriesNews";
+import { getCategoriesNews } from "@/lib/data";
 import { Avatar, Button, Card, CardFooter, CardHeader, Chip} from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +9,7 @@ const CategoriesNews = async ({id}) => {
     const news = await getCategoriesNews(id);
 
     return (
-        <Link href={`${/category/}`} className="flex flex-col w-11/12 mx-auto gap-6 py-6">
+        <div className="flex flex-col w-11/12 mx-auto gap-6 py-6">
             {news.map((specificNews) => {
                 // Destructuring all necessary properties from specificNews
                 const {
@@ -97,12 +97,12 @@ const CategoriesNews = async ({id}) => {
                                 {details}
                             </p>
 
-                            <a
-                                href={`/news/${_id}`}
+                            <Link
+                                href={`/newsdetails/${_id}`}
                                 className="text-xs font-semibold text-orange-500 hover:underline"
                             >
                                 Read More
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="border-t border-default-200 my-2" />
@@ -133,7 +133,7 @@ const CategoriesNews = async ({id}) => {
                     </Card>
                 );
             })}
-        </Link>
+        </div>
     );
 };
 

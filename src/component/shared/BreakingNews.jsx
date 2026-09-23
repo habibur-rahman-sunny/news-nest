@@ -37,7 +37,7 @@ const BreakingNews = () => {
             {/* <div className="flex gap-10">
                 {news.map((n, index) => <p className="font-bold" key={index}>{n.title}</p>)}
                 </div> */}
-                <p className="font-bold">This website was <span className="text-red-800 bg-white">created just for practice</span>. I do not know whether the news featured on this website is true or false.</p>
+                <p className="font-bold"><span className="bg-gray-200 text-gray-200">sfasasassfsdssd</span>শুধুমাত্র নির্মাণকারীর অনুশীলনের জন্য সংবাদ ও তথ্য দেওয়া হয়েছে,<span className="text-red-800 bg-white">ইউজারদের জন্য নয়</span>.<span className="bg-gray-200 text-gray-200">sfsfsdssd</span>News and information are provided only for the developers practice, <span className="bg-white text-red-800">not for users.</span></p>
             </Marquee>
         </div>
     );

@@ -1,5 +1,6 @@
 import CategoriesNews from '@/component/CategoriesNews/CategoriesNews';
 import NewsCategories from '@/component/NewsCategories/NewsCategories';
+import RightSideBar from '@/component/RightSideBar/RightSideBar';
 import React from 'react';
 
 const categoryNewsPage = async({params}) => {
@@ -13,7 +14,7 @@ const categoryNewsPage = async({params}) => {
       <CategoriesNews id={id}></CategoriesNews>
       </div>
       <div className="bg-slate-50 col-span-3">
-        <p>Categories</p>
+        <RightSideBar></RightSideBar>
       </div>
     </div>
     );
