@@ -1,6 +1,7 @@
 import {Button} from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+import ReusableNav from "./ReusableNav";
 const Navbar = () => {
     return (
         <div>
@@ -10,9 +11,9 @@ const Navbar = () => {
                     <p className="font-bold">ACME</p>
                     {/* Center */}
                     <ul className="absolute left-1/2 flex -translate-x-1/2 items-center gap-4">
-                        <li><Link href="/">Home</Link></li>
-                        <li><Link href="/about">About</Link></li>
-                        <li><Link href="/career">Career</Link></li>
+                        <li><ReusableNav href="/">Home</ReusableNav></li>
+                        <li><ReusableNav href="/about">About</ReusableNav></li>
+                        <li><ReusableNav href="/career">Career</ReusableNav></li>
                     </ul>
                     {/* Right */}
                     <div className='flex gap-2'>

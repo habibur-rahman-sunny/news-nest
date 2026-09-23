@@ -1,6 +1,6 @@
 import React from 'react';
 
-const categoryPage = () => {
+const categoryNewsPage = () => {
     return (
         <div>
             
