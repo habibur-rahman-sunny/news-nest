@@ -1,3 +1,7 @@
+"use client"
+import { authClient } from "@/app/lib/auth-client";
+import { FaGithub, FaGoogle } from "react-icons/fa";
+
 const cards = [
   {
     id: 1,
@@ -93,8 +97,36 @@ const cards = [
 ];
 
 const RightSideBar = () => {
+
+  const handleGoogleSignIn = async()=>{
+    const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  
+  }
+  const handleGithubSignIn = async()=>{
+    const data = await authClient.signIn.social({
+        provider: "github"
+    })
+    console.log(data);
+  }
   return (
     <div className="space-y-4">
+      {/* Social Login */}
+      <div className="mt-4 flex flex-col gap-2">
+        <p className="text-sm font-bold text-gray-800">Login With</p>
+
+        <button onClick={handleGoogleSignIn} className="flex w-full items-center justify-center gap-2 rounded-md border border-blue-400 bg-white px-3 py-1.5 text-xs text-blue-500 hover:bg-gray-50">
+
+          <FaGoogle />
+          <p className="font-semibold">Login with Google</p>
+        </button>
+
+        <button onClick={handleGithubSignIn} className="flex w-full items-center justify-center gap-2 rounded-md border border-gray-500 bg-white px-3 py-1.5 text-xs text-gray-800 hover:bg-gray-50">
+          <FaGithub />
+          <p className="font-semibold">Login with Github</p>
+        </button>
+      </div>
       {cards.map((card) => (
         <div
           key={card.id}

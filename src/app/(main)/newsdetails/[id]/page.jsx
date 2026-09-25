@@ -8,7 +8,7 @@ const NewsDetailsPage = async ({params}) => {
     const newsDetails = await getNewsDetails(id)
     return (
         <div className="space-y-10 w-10/12 mx-auto">
-            {newsDetails.data.map(
+            {newsDetails.map(
                 ({
                     _id,
                     category_id,
@@ -40,7 +40,7 @@ const NewsDetailsPage = async ({params}) => {
                             {/* Main Image */}
                             <div className="relative w-full h-62.5 md:h-100 mb-5">
                                 <Image
-                                    src={image_url}
+                                    src={image_url?.[0]}
                                     alt={title}
                                     fill
                                     className="object-cover rounded-lg"
@@ -50,7 +50,7 @@ const NewsDetailsPage = async ({params}) => {
                             {/* Author + Date */}
                             <div className="flex items-center gap-3 mb-5">
                                 <Image
-                                    src={img}
+                                    src={img?.[0]}
                                     alt={name}
                                     width={45}
                                     height={45}

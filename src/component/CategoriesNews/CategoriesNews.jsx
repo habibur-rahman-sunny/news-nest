@@ -75,8 +75,8 @@ const CategoriesNews = async ({id}) => {
                             <div className="relative mb-3">
                                 <Image
                                     alt={title}
-                                    className="object-cover w-full h-[180px] rounded-lg"
-                                    src={image_url}
+                                    className="object-cover w-full h-45 rounded-lg"
+                                    src={image_url?.[0]}
                                     width={400}
                                     height={180}
                                 />
